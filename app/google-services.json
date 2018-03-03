@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "220617822827",
+    "firebase_url": "https://uspeak-faa6e.firebaseio.com",
+    "project_id": "uspeak-faa6e",
+    "storage_bucket": "uspeak-faa6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220617822827:android:475e092abf90d1e6",
+        "android_client_info": {
+          "package_name": "co.edu.uco.uspeak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "220617822827-1lcup2u8dl40120kuudp4ek8g0rmc5pl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.edu.uco.uspeak",
+            "certificate_hash": "bc8626484b768a8d380133a6143f26d35b11d6fd"
+          }
+        },
+        {
+          "client_id": "220617822827-vsgqgp55fuaspidk7ali3if2vd4fg0en.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVr9BPnP6X2rFfzZ83H0etLv2fe0BG2Ng"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "220617822827-vsgqgp55fuaspidk7ali3if2vd4fg0en.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
