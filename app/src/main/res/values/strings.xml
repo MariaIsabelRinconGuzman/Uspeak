@@ -7,4 +7,6 @@
 
     <string name="action_logout">Logout</string>
     <string name="action_profiles">Profile</string>
+    <string name="action_appointments">Dating history</string>
+    <string name="googleBtn">Sign in</string>
 </resources>

@@ -11,6 +11,8 @@ public class User {
     private String profilePicture;
     private String interest;
     private String uid;
+    private String token;
+    private String keyFirebase;
 
     public int getPoints() {
         return points;
@@ -53,4 +55,20 @@ public class User {
     public String getUid() { return uid; }
 
     public void setUid(String uid) { this.uid = uid; }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getKeyFirebase() {
+        return keyFirebase;
+    }
+
+    public void setKeyFirebase(String keyFirebase) {
+        this.keyFirebase = keyFirebase;
+    }
 }

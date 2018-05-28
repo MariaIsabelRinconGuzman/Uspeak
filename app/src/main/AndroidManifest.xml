@@ -13,22 +13,57 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name">
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChatActivity" />
-        <activity android:name=".AccountActivity" />
         <activity
-            android:name=".InitialActivity"
-            android:label="@string/title_activity_initial"
+            android:name=".ItemsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".BaseActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".QualificationActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".MeetingActivity"></activity>
+        <activity android:name=".MeetingActivity" />
+        <activity android:name=".PendingActivity" />
+
+        <service
+            android:name=".Service.FireBaseId"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Service.FireBaseServiceMessages"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+     Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/uspeak_icon" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <activity android:name=".StatisticsActivity"></activity>
     </application>
 
 </manifest>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="co.edu.uco.uspeak.MeetingActivity">
 
     <LinearLayout
@@ -24,59 +24,105 @@
                 android:id="@+id/textViewMeetingUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add a meeting with " />
+                android:text="Add a meeting with "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/fotoPerfil"
-                android:layout_width="107dp"
-                android:layout_height="93dp"
-                android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fotoPerfil"
+                    android:layout_width="107dp"
+                    android:layout_height="93dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.21"
+                    android:src="@mipmap/ic_launcher" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.21"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select a day:" />
+
+                        <ImageButton
+                            android:id="@+id/btnDatePicker"
+                            android:layout_width="193dp"
+                            android:layout_height="44dp"
+                            android:background="@android:color/transparent"
+                            app:srcCompat="@drawable/icons8_calendario_24"
+                            tools:layout_editor_absoluteX="136dp"
+                            tools:layout_editor_absoluteY="139dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="Select an hour:" />
+
+                        <ImageButton
+                            android:id="@+id/btnTimePicker"
+                            android:layout_width="190dp"
+                            android:layout_height="39dp"
+                            android:background="@android:color/transparent"
+                            app:srcCompat="@drawable/icons8_reloj_24" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="123dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textViewSelectDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Date"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-                    <ImageButton
-                        android:id="@+id/btnDatePicker"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        app:srcCompat="@android:drawable/ic_menu_my_calendar"
-                        tools:layout_editor_absoluteX="136dp"
-                        tools:layout_editor_absoluteY="139dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="213dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/btnTimePicker"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
-                </LinearLayout>
-
+                <TextView
+                    android:id="@+id/textViewSelectTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hour"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textViewSelectDateTime"
+            <ImageButton
+                android:id="@+id/btnCreateMeeting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=" " />
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/icons8_invitacion_24" />
+
         </LinearLayout>
-
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>

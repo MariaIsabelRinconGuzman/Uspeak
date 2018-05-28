@@ -14,7 +14,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * Created by user on 04/09/2017. 04
  */
 
-public class HolderUsuario extends RecyclerView.ViewHolder {
+public class HolderUsers extends RecyclerView.ViewHolder {
 
     private TextView nombre;
     private TextView email;
@@ -24,7 +24,7 @@ public class HolderUsuario extends RecyclerView.ViewHolder {
     private TextView points;
     private ImageButton conect;
 
-    public HolderUsuario(View itemView) {
+    public HolderUsers(View itemView) {
         super(itemView);
         nombre = (TextView) itemView.findViewById(R.id.nombre);
         email = (TextView) itemView.findViewById(R.id.email);

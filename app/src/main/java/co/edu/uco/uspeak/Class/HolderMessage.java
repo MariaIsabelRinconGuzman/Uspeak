@@ -2,7 +2,6 @@ package co.edu.uco.uspeak.Class;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,7 +13,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * Created by user on 04/09/2017. 04
  */
 
-public class HolderMensaje extends RecyclerView.ViewHolder {
+public class HolderMessage extends RecyclerView.ViewHolder {
 
     private TextView nombre;
     private TextView mensaje;
@@ -23,7 +22,7 @@ public class HolderMensaje extends RecyclerView.ViewHolder {
     private ImageView fotoMensaje;
     private ImageButton btnPlay;
 
-    public HolderMensaje(View itemView) {
+    public HolderMessage(View itemView) {
         super(itemView);
         nombre = (TextView) itemView.findViewById(R.id.nombreMensaje);
         mensaje = (TextView) itemView.findViewById(R.id.mensajeMensaje);
@@ -31,7 +30,7 @@ public class HolderMensaje extends RecyclerView.ViewHolder {
         fotoMensajePerfil = (CircleImageView) itemView.findViewById(R.id.fotoPerfilMensaje);
         fotoMensaje = (ImageView) itemView.findViewById(R.id.mensajeFoto);
         btnPlay = (ImageButton) itemView.findViewById(R.id.btnPlay);
-        btnPlay.setVisibility(View.INVISIBLE);
+        //btnPlay.setVisibility(View.INVISIBLE);
     }
 
     public TextView getNombre() {

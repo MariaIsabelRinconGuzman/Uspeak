@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="5sp"
+    android:orientation="vertical"
     tools:context="co.edu.uco.uspeak.MainActivity">
 
     <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="495dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="-1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
@@ -58,8 +61,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="0.68">
+                android:layout_weight="0.68"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -99,19 +102,19 @@
 
                     <TextView
                         android:id="@+id/textViewInterest"
-                        android:layout_width="match_parent"
+                        android:layout_width="135dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
                         android:text="Interest"
                         tools:layout_editor_absoluteX="8dp"
                         tools:layout_editor_absoluteY="0dp" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/btnAddInterest"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Add" />
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@android:drawable/ic_input_add" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -144,23 +147,24 @@
                 android:text="Users"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp">
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rvUsers"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"></android.support.v7.widget.RecyclerView>
-
-
-        </LinearLayout>
-
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="100dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="true"
+            android:scrollbarSize="5dp"
+            android:scrollbarThumbVertical="@android:color/darker_gray"
+            android:scrollbars="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="101dp"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</LinearLayout>
